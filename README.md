@@ -75,16 +75,22 @@
   
   Now let's get back to our omomorphism definition. An omomorphism is a particular mapping/function where its definition holds, that is, where the mapping $G &rarr; H$ must satisfy
 
-  $(x \in G &rarr; H)(y \in G &rarr; H) = (xy \in G &rarr; H)$
+  $(x \in G &rarr; H)(y \in G &rarr; H) = (xy \in G &rarr; H)$<br>
+  $->$<br>
+  $(x \in G &rarr; H)?_2(y \in G &rarr; H) = (x?_1y \in G &rarr; H)$<br>
+  $->$<br>
+  $(a \in H)?_2(b \in H) = (x?_1y \in G &rarr; H)$
+  
+  Here lie a couple behaviours which could not be straightforward at first sight, we can see that there are two implied relations $?_{1, 2}$ between $(a)?_2(b), a, b \in H$ and $x?_1y, x, y \in G$. This relation strongly affects the resulting property, and the reason of subscripts is because of the implied definitions
 
-  Here lie a couple behaviours which could not be straightforward at first sight, we can see that there are two implied relations $?_{1, 2}$ between $(a)?_2(b)$ and $x?_1y$. This relation strongly affects the resulting property, and the reason of subscripts is because of the definitions
+  $G^{?_1} = (\\{x, y, \dots \\}, ?_1)$<br>
+  $H^{?_2} = (\\{a, b, \dots \\}, ?_2)$
 
-  $G^{?_1} = (\\{x, y, z, \dots \\}, ?_1)$<br>
-  $H^{?_2} = (\\{a, b, c, \dots \\}, ?_2)$
+  and because that relation (binary operation) will be defined individually for elements which belong to $G$ or $H$. Now, if we consider $G$ and $H$ as _multiplicative finite groups_ then the implied relation is exactly the same because the binary operation defined for _multiplicative finite groups_ is the same, but this is not true in general.
   
   #### Example
 
-  Imagine the _infinite group_ $G$ defined over the positive integers towards infinity and $H$ being a _finite group_ $Z_{H}^{\ast}$ of order $n - 1$, thus $n$ is prime, we have
+  Imagine the _infinite group_ $G$ defined over the positive integers towards infinity and $H$ being a _finite group_ $Z_{n}^{\ast}$ of order $n - 1$, thus $n$ is prime, we have
 
   $G = (\\{1, 2, \dots, \infty \\}, ?_1 = \times)$<br>
   $H = (\\{1, 2, \dots, n - 1 \\}, ?_2 = \times \mod n)$
