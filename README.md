@@ -44,7 +44,7 @@
 </p>
 
 
-## Homomorphism, isomorphism, endomorphism, automorphism (and every other word which ends with 'morphism', jk)
+## Homomorphism and isomorphism
 
 <p>
   
@@ -67,38 +67,39 @@
      - Every element of the domain must be mapped (it's not true for the codomain).
 
   4. A map/function has different properties which define it's structure, it can be
-     - **Surjective**: Every element of the codomain is mapped.
-     - **Injective**: Every element of the domain maps $1$ and only $1$ element of the codomain.
-     - **Bijective**: If it's both surjective and injective.
-
-  Now let's get back to our omomorphism definition. An omomorphism is a particular mapping/function where its definition holds, that is, where the mapping $G &rarr; H$ is defined as
-
-  $x \in G &rarr; H, y \in G &rarr; H = x \cdot y \in G &rarr; H$
-
-  
-    
-   
-
-
-  
-  
-  Since I don't want to write the definitions of surjective, injective and bijective I'll just provide the image below where you can extract the meaning of all of them.
+     - **surjective**: every element of the codomain is mapped.
+     - **injective**: every element of the domain maps $1$ and only $1$ element of the codomain.
+     - **bijective**: if it's both surjective and injective.
 
   ![ISB](Inj_Surj_Bij.svg)
-
   
+  Now let's get back to our omomorphism definition. An omomorphism is a particular mapping/function where its definition holds, that is, where the mapping $G &rarr; H$ must satisfy
 
+  $(x \in G &rarr; H)(y \in G &rarr; H) = (xy \in G &rarr; H)$
+
+  Here lie a couple behaviours which could not be straightforward at first sight, we can see that there are two implied relations $#_{1, 2}$ between $(~)#_1(~)$ and $x#_2y$. This relation strongly affects the resulting property.
+  
   #### Example
 
-  Imagine the _infinite group_ $G$ defined over the integers towards infinity and $G_n$ being a _finite group_ of order $n - 1$, we have
+  Imagine the _infinite group_ $G$ defined over the positive integers towards infinity and $H$ being a _finite group_ $Z_{H}^{\ast}$ of order $n - 1$, thus $n$ is prime, we have
 
-  $G = (\\{1, 2, \dots, \infty \\}, \times)$<br>
-  $G_n = (\\{1, 2, \dots, n - 1 \\}, \times)$
+  $G = (\\{1, 2, \dots, \infty \\}, #_1 = \times)$<br>
+  $H = (\\{1, 2, \dots, n - 1 \\}, #_2 = \times \mod n)$
 
-  We define the omomorphism $f : G &rarr; G_n$ where $f(x) = x$, then we have
+  We define the omomorphism $f : G &rarr; H$ where $f(x) = x \mod n$, then we have
 
-  $
+  $(x \in G &rarr; H)(y \in G &rarr; H) = (xy \in G &rarr; H)$<br>
+  $->$<br>
+  $(x \in G &rarr; H)#_2(y \in G &rarr; H) = (x#_2y \in G &rarr; H)$<br>
+  $->$<br>
+  $(x \mod n)#_2(y \mod n) = (x \times y \mod n)$<br>
+  $->$<br>
+  $(x \mod n) \times (y \mod n) \mod n = (x \times y \mod n)$
 
+  which holds since [https://github.com/Z323323/From-Fermat-to-the-group-theory?tab=readme-ov-file#multiplication-property].
+
+  This means that the set of positive integers is omomorphic to the set of positive integers $\mod n$ where $n$ is prime. Or stated in a different manner, there exists an omomorphism between the set of positive integers and the the set of positive integers $\mod n$ where $n$ is prime.
+  
 </p>
 
   ## Some basic theorems collapsed
