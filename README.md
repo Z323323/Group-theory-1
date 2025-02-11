@@ -3,6 +3,7 @@
 ## Groups
 
 <p>
+  
   [https://crypto.stanford.edu/pbc/notes/group/group.html].
   
   We define a group $G^{\ast}$ as a set $G$ and a binary operation $\cdot$ having the following properties:
@@ -43,16 +44,49 @@
 </p>
 
 
-## Homomorphism and isomorphism
+## Homomorphism, isomorphism, endomorphism, automorphism (and every other word which ends with 'morphism', jk)
 
 <p>
+  
   An homomorphism is a map $f : G &rarr; H$ between two different groups where
 
   $f(x)f(y) = f(xy)$
 
   for all $x, y \in G$. If $f$ is bijective then $f$ is called **isomorphism**.
 
-  Let's clarify this concept a little, since it looks really abstract, and it is indeed, and it's also really important in math.
+  Let's clarify this concept, since it looks really abstract, and it is indeed, and it's also really important in math.
+
+  First thing to understand is the meaning of **map**, and the different kinds of map in mathematics.
+  
+  1. **map** = **function**. A function is a map which associates elements from a set (**domain**) to some elements of another set (**codomain**). The actual elements mapped will be elements $\in$ **codomain**, which are called **image** of the function/map, and so we could have **image = codomain** or not.
+
+![Map](Map.SVG.png)
+
+  2. A map/function has $2$ foundation constraints which defines it.
+     - It can't have two mappings starting from the domain, it's exactly one map for every element of the domain, while it can for example has two elements which map the same element of the codomain/image.
+     - Every element of the domain must be mapped (it's not true for the codomain).
+
+  4. A map/function has different properties which define it's structure, it can be
+     - **Surjective**: Every element of the codomain is mapped.
+     - **Injective**: Every element of the domain maps $1$ and only $1$ element of the codomain.
+     - **Bijective**: If it's both surjective and injective.
+
+  Now let's get back to our omomorphism definition. An omomorphism is a particular mapping/function where its definition holds, that is, where the mapping $G &rarr; H$ is defined as
+
+  $x \in G &rarr; H, y \in G &rarr; H = x \cdot y \in G &rarr; H$
+
+  
+    
+   
+
+
+  
+  
+  Since I don't want to write the definitions of surjective, injective and bijective I'll just provide the image below where you can extract the meaning of all of them.
+
+  ![ISB](Inj_Surj_Bij.svg)
+
+  
 
   #### Example
 
@@ -89,7 +123,7 @@
 
    #### 5
 
-   For a subgroup $H$, for all $h \in H$ it must be that $hH = H = Hh$. Following [https://github.com/Z323323/Group-theory-elements?tab=readme-ov-file#multiplicative-groups-cyclic-subgroups-and-generators] $h$ must be some power of $e$ where $e$ is a generator for the subgroup; the lemma follows. I want to clarify that I'm almost sure 'subgroups = cyclic subgroups' by our current definitions and so, if you read the linked resource just note this fact.
+   For a subgroup $H$, for all $h \in H$ it must be that $hH = H = Hh$. Following [https://github.com/Z323323/Group-theory-elements?tab=readme-ov-file#multiplicative-groups-cyclic-subgroups-and-generators] $h$ must be some power of $e$ where $e$ is a generator for the subgroup; the lemma follows.
 
    #### 6
 
@@ -97,7 +131,7 @@
 
    #### 7
 
-   A non-empty subset $H \subset G$ is a subgroup iff $H^{2} = H$. Follows from the previous ones.
+   A non-empty subset $H \subset G$ is a subgroup iff $H^{2} = H$. Follows from (4).
 
    #### 8
 
