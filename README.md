@@ -77,22 +77,25 @@
 
   $(x \in G &rarr; H)(y \in G &rarr; H) = (xy \in G &rarr; H)$
 
-  Here lie a couple behaviours which could not be straightforward at first sight, we can see that there are two implied relations $#_{1, 2}$ between $(~)#_1(~)$ and $x#_2y$. This relation strongly affects the resulting property.
+  Here lie a couple behaviours which could not be straightforward at first sight, we can see that there are two implied relations $?_{1, 2}$ between $(a)?_2(b)$ and $x?_1y$. This relation strongly affects the resulting property, and the reason of subscripts is because of the definitions
+
+  $G^{?_1} = (\\{x, y, z, \dots \\}, ?_1)$<br>
+  $H^{?_2} = (\\{a, b, c, \dots \\}, ?_2)$
   
   #### Example
 
   Imagine the _infinite group_ $G$ defined over the positive integers towards infinity and $H$ being a _finite group_ $Z_{H}^{\ast}$ of order $n - 1$, thus $n$ is prime, we have
 
-  $G = (\\{1, 2, \dots, \infty \\}, #_1 = \times)$<br>
-  $H = (\\{1, 2, \dots, n - 1 \\}, #_2 = \times \mod n)$
+  $G = (\\{1, 2, \dots, \infty \\}, ?_1 = \times)$<br>
+  $H = (\\{1, 2, \dots, n - 1 \\}, ?_2 = \times \mod n)$
 
   We define the omomorphism $f : G &rarr; H$ where $f(x) = x \mod n$, then we have
 
   $(x \in G &rarr; H)(y \in G &rarr; H) = (xy \in G &rarr; H)$<br>
   $->$<br>
-  $(x \in G &rarr; H)#_2(y \in G &rarr; H) = (x#_2y \in G &rarr; H)$<br>
+  $(x \in G &rarr; H)?_2(y \in G &rarr; H) = (x?_1y \in G &rarr; H)$<br>
   $->$<br>
-  $(x \mod n)#_2(y \mod n) = (x \times y \mod n)$<br>
+  $(x \mod n)?_2(y \mod n) = (x \times y \mod n)$<br>
   $->$<br>
   $(x \mod n) \times (y \mod n) \mod n = (x \times y \mod n)$
 
