@@ -143,21 +143,15 @@
 
   If $x \in G$ has order $mn$, where $m, n$ are coprime, then $x$ can be uniquely expressed in the form $x = uv$ where $u$ has order $m$ and $v$ has order $n$. Let $u = x^{bn}$ and $v = x^{am}$ such that $bn + am = 1$, by Bezout's Identity that equation always has a solution. This means that for example, if the solution of the identity is $bn - am = 1$ then
 
-  $\displaystyle x = \frac{x^{bn}}{x^{am}}$
-
-  Here one could argue that the statement said $x = uv$, yep, indeed
-
-  $\displaystyle x = uv^{- 1} = \frac{u}{v}$
-
-  (for example). This theorem could look very strange at first, you should note that we are making an abstraction considering $x$, because $x = g^{k}$ for some $k$ and
+  $\displaystyle x = \frac{x^{bn}}{x^{am}} \mod mn$
   
-  $kbn - kam = k$<br>
+  This theorem could look very strange at first, you should note that we are making an abstraction considering $x$, because $x = g^{k}$ for some $k$ and
+  
+  $bn - am = 1$<br>
   $->$<br>
-  $\displaystyle \frac{kbn - kam}{k} = \frac{k}{k}$<br>
-  $->$<br>
-  $\displaystyle bn - am = 1$
+  $\displaystyle g^{k} = \frac{g^{bn}}{g^{am}} \mod mn$
 
-  solves for $g^{k}$, too, that is, it's clear that we can avoid to consider $k$ to solve the theorem, and this means that we can just consider the same generator for the two different subgroups as $x$, which is exactly what the theorem proves.
+  for all $k \geq 0$ (for any $x$) and some $a, b$.
   
    #### 3
 
@@ -183,6 +177,17 @@
 
    Let $g \in G$ and $H \leq G$, then $g^{- 1}Hg$ is a subgroup of $G$ isomorphic to $H$. To figure this out quickly, remember that $G$ and $H$ are defined over the same modulo, this means that we are basically removing elements from $H$ and then reinsert them probably altering the order. Calling $R$ the resulting set, we will have $|R| = |H|$ and $R = H$.
     
+</p>
+
+## Langrange's theorem
+
+<p>
+
+  [https://crypto.stanford.edu/pbc/notes/group/lagrange.html].
+
+  Let's now analyse this core theorem from a more formal point of view.
+
+  
 </p>
   
 
