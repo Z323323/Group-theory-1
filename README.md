@@ -143,15 +143,15 @@
 
   If $x \in G$ has order $mn$, where $m, n$ are coprime, then $x$ can be uniquely expressed in the form $x = uv$ where $u$ has order $m$ and $v$ has order $n$. Let $u = x^{bn}$ and $v = x^{am}$ such that $bn + am = 1$, by Bezout's Identity that equation always has a solution. This means that for example, if the solution of the identity is $bn - am = 1$ then
 
-  $\displaystyle x = \frac{x^{bn}}{x^{am}} \mod mn$
+  $\displaystyle x = \frac{x^{bn}}{x^{am}}$
   
   This theorem could look very strange at first, you should note that we are making an abstraction considering $x$, because $x = g^{k}$ for some $k$ and
   
   $bn - am = 1$<br>
   $->$<br>
-  $\displaystyle g^{k} = \frac{g^{bn}}{g^{am}} \mod mn$
+  $\displaystyle g^{k} = \frac{g^{kbn}}{g^{kam}} \mod mn = g^{k(bn - am)} = g^{k(1)} = g^{k} = x$
 
-  for all $k \geq 0$ (for any $x$) and some $a, b$.
+  This whole construction holds because by [https://github.com/Z323323/Roots-of-unity?tab=readme-ov-file#obtaining-the-almighty-power-on-multiplicative-groups-analysing-gauss-heptadecagon-and-gaussian-periods] we know that $u = g^{kn}$ and $v = g^{km}$ is a general form to represent both subgroups elements.
   
    #### 3
 
