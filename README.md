@@ -120,14 +120,18 @@
   $->$<br>
   $(x \mod n &rarr; M)(y \mod n &rarr; M) = (xy \mod n &rarr; M)$<br>
   $->$<br>
-  $(a \mod m)(b \mod m) \mod m = (z \mod n) \mod m$
+  $((x \mod n) \mod m)((y \mod n) \mod m) \mod m = (z \mod n) \mod m$
 
-  This is hard, and individual cases will require time to be analyzed, but we will probably face the same modulo operation operating with these, and therefore subgroups relations, that is, something of this form
+  Now, before you start crying, note that we will face the same modulo operation operating with _finite groups_ in general (therefore subgroups relations), that is, something of this form
 
   $G = (\\{x, y, \dots, \phi(n) \\}, \cdot \mod n)$<br>
-  $S = (\\{a, b, \dots, \phi(n)/p \\}, \cdot \mod n)$
+  $S = (\\{a, b, \dots, \phi(n)/p \\}, \cdot \mod n)$<br>
+  $->$<br>
+  $(a \mod n)(b \mod n) \mod n = c \mod n$
 
-  We can spot that in order to have an **isomorphism** then we necessarily have $|G| = |S|$ which reduces the problem complexity by far because it means that we are operating under the same modulo **and** the same number of elements in the set, thus, $G = S$.
+  We can spot that in order to have an **isomorphism** then we necessarily have $|G| = |S|$ which reduces the problem complexity by far because it means that we are operating under the same modulo **and** the same number of elements in the sets, thus, $G = S$.
+
+  Note that unless specified, every operation from now on will be over the same modulo operation and we will refer to _finite multiplicative groups_.
   
 </p>
 
@@ -149,7 +153,7 @@
   
   $bn - am = 1$<br>
   $->$<br>
-  $\displaystyle g^{k} = \frac{g^{kbn}}{g^{kam}} \mod mn = g^{k(bn - am)} = g^{k(1)} = g^{k} = x$
+  $\displaystyle g^{k} = \frac{g^{kbn}}{g^{kam}} = g^{k(bn - am)} = g^{k(1)} = g^{k} = x$
 
   This whole construction holds because by [https://github.com/Z323323/Roots-of-unity?tab=readme-ov-file#obtaining-the-almighty-power-on-multiplicative-groups-analysing-gauss-heptadecagon-and-gaussian-periods] we know that $u = g^{kn}$ and $v = g^{km}$ is a general form to represent both subgroups elements.
   
@@ -179,13 +183,50 @@
     
 </p>
 
-## Langrange's theorem
+## Lagrange's theorem
 
 <p>
 
   [https://crypto.stanford.edu/pbc/notes/group/lagrange.html].
 
   Let's now analyse this core theorem from a more formal point of view.
+
+  #### Lemma
+
+  Let $H$ be a subgroup of $G$ and $r, s \in G$, then $Hr = Hs$ iff $rs^{- 1} \in H$, otherwise $Hr$ and $Hs$ have no element in common.
+
+  #### Proof
+
+  Taking $r = g^{4k} \in H, s = g^{2k} \in S (\not\in H)$, (we are basically implying the order of $H$ being $\phi(n)/4$, and the order of $S$ being $\phi(n)/4$) produces
+
+  $\displaystyle \frac{g^{4k}}{g^{2k}} = g^{2k} \in H$
+
+  even though we can easily see
+  
+  $g^{2k}H = H$
+
+  but
+
+  $g^{4k}H \neq H$
+
+  The theorem could be misleading because it states that $Hr = Hs$ iff $rs^{- 1} \in H$ but $rs^{- 1} \in H$ doesn't necessarily means $Hr = Hs$, the only truth is that if $Hr = Hs$ then we necessarily have $rs^{- 1} \in H$. Indeed as you just saw, in order to have $Hr = Hs$ then $r, s \in H$.
+
+  The second part states that if $rs^{- 1} \not\in H$ then $Hr$ and $Hs$ have no element in common. This means that two elements taken from two different subgroups where $x \in X$, $y \in Y$ and
+
+  $g^{kx}$
+
+  is not divisible by $g^{ky}$ are clearly such that $HX \neq H \neq HY$ for every element.
+  
+  #### Proof 
+
+  If $rs^{- 1} = h \in H$, then $H = Hh = (Hr)s^{- 1}$. Now 
+  
+  $Hs = Hhs = Hrs^{- 1}s = Hr$<br>
+  $->$<br>
+  $Hs = Hr$
+
+  
+
 
   
 </p>
