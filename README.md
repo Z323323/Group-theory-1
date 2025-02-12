@@ -157,7 +157,7 @@
   $->$<br>
   $\displaystyle bn - am = 1$
 
-  solves for $g^{k}$, too, that is, it's clear that we can avoid to consider $k$ to solve the theorem.
+  solves for $g^{k}$, too, that is, it's clear that we can avoid to consider $k$ to solve the theorem, and this means that we can just consider the same generator for the two different subgroups as $x$, which is exactly what the theorem proves.
   
    #### 3
 
