@@ -122,9 +122,12 @@
   $->$<br>
   $(a \mod m)(b \mod m) \mod m = (z \mod n) \mod m$
 
-  Can you solve this in general? Because I can't honestly :'D. This is hard, and individual cases will require time to be analyzed.
+  This is hard, and individual cases will require time to be analyzed, but we will probably face the same modulo operation operating with these, and therefore subgroups relations, that is, something of this form
 
-  We can spot that in order to have an **isomorphism** then we necessarily have $|N| = |M|$, thus, $N = M$.
+  $G = (\\{x, y, \dots, \phi(n) \\}, \cdot \mod n)$<br>
+  $S = (\\{a, b, \dots, \phi(n)/p \\}, \cdot \mod n)$
+
+  We can spot that in order to have an **isomorphism** then we necessarily have $|G| = |S|$ which reduces the problem complexity by far because it means that we are operating under the same modulo **and** the same number of elements in the set, thus, $G = S$.
   
 </p>
 
@@ -138,7 +141,23 @@
 
   #### 2
 
-  If $x \in G$ has order $mn$, where $m, n$ are coprime, then $x$ can be uniquely expressed in the form $x = uv$ where $u$ has order $m$ and $v$ has order $n$. Picking $u = x^{bn}$ and $v = x^{am}$ such that $bn + am = 1$ solves the theorem, because $m, n$ are coprimes and then by Bezout's Identity it will always exist $a, b$ integers which solve the equality.
+  If $x \in G$ has order $mn$, where $m, n$ are coprime, then $x$ can be uniquely expressed in the form $x = uv$ where $u$ has order $m$ and $v$ has order $n$. Let $u = x^{bn}$ and $v = x^{am}$ such that $bn + am = 1$, by Bezout's Identity that equation always has a solution. This means that for example, if the solution of the identity is $bn - am = 1$ then
+
+  $\displaystyle x = \frac{x^{bn}}{x^{am}}$
+
+  Here one could argue that the statement said $x = uv$, yep, indeed
+
+  $\displaystyle x = uv^{- 1} = \frac{u}{v}$
+
+  (for example). This theorem could look very strange at first, you should note that we are making an abstraction considering $x$, because $x = g^{k}$ for some $k$ and
+  
+  $kbn - kam = k$<br>
+  $->$<br>
+  $\displaystyle \frac{kbn - kam}{k} = \frac{k}{k}$<br>
+  $->$<br>
+  $\displaystyle bn - am = 1$
+
+  solves for $g^{k}$, too, that is, it's clear that we can avoid to consider $k$ to solve the theorem.
   
    #### 3
 
