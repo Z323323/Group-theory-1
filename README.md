@@ -185,14 +185,28 @@
 
    Analyzing $(2)$ I noticed we can make a convenient formalization. 
 
-   Let $S$ be a subgroup of $G$, we can refer to every element of $S$ letting $s \in (G, S)$ generator for $S$ and writing 
+   Let $S$ be a subgroup of $G$, we can refer to every element of $S$ letting $g \in G$ generator for $G$ and writing 
 
-   $s^{kx}$
+   $g^{kx}$
 
-   where $k$ is a constant such that if the order of $S$ is $\phi(n) / y$ for some $y | \phi(n)$ ($S$ is the subgroup defined by the roots of unity of $y$)
+   where $x \geq 1$ and $k$ is a constant such that the order $o$ of $S$ is $\phi(n) / k$ for some $k | \phi(n)$ ($S$ is the subgroup defined by the roots of unity of $o$).
 
-   $\displaystyle k \cdot \frac{y}{\phi(n)} = \phi(n)$
- 
+   #### Example 1
+
+   Let $S$ be a subgroup of $G$ of order $o = \phi(n) / 2$, and $g$ a generator for $G$, then we can represent every element of $S$ using the general form
+
+   $g^{2x}$
+
+   #### Example 2
+
+   Let $G$ of order $\phi(n)$ where $\phi(n) = 2 \cdot 3 \cdot 13$; let $g$ a generator for $G$ and $S$ a subgroup of order $o = 13$, then we have
+   
+   $\displaystyle o_S = \frac{\phi(n)}{2 \cdot 3}$ 
+   
+   and we can define the general form for every element of $S$ as
+
+   $g^{6x}$
+
 </p>
 
 ## Lagrange's theorem
@@ -207,34 +221,35 @@
 
   #### Proof
 
-  Taking $r = g^{4k} \in H, s = g^{2k} \in S (\not\in H)$, (we are basically implying the order of $H$ being $\phi(n)/4$, and the order of $S$ being $\phi(n)/4$) produces
-
-  $\displaystyle \frac{g^{4k}}{g^{2k}} = g^{2k} \in H$
-
-  even though we can easily see
+  Let $r = g^{k_1x}, s = g^{k_2x}$, and the general form for any element of $S$ as $g^{kx}$. In order to have $Hr = Hs$ it must be that
   
-  $g^{2k}H = H$
-
-  but
-
-  $g^{4k}H \neq H$
-
-  The theorem could be misleading because it states that $Hr = Hs$ iff $rs^{- 1} \in H$ but $rs^{- 1} \in H$ doesn't necessarily means $Hr = Hs$, the only truth is that if $Hr = Hs$ then we necessarily have $rs^{- 1} \in H$. Indeed as you just saw, in order to have $Hr = Hs$ then $r, s \in H$.
-
-  The second part states that if $rs^{- 1} \not\in H$ then $Hr$ and $Hs$ have no element in common. This means that two elements taken from two different subgroups where $x \in X$, $y \in Y$ and
-
-  $g^{kx}$
-
-  is not divisible by $g^{ky}$ are clearly such that $HX \neq H \neq HY$ for every element.
-  
-  #### Proof 
-
-  If $rs^{- 1} = h \in H$, then $H = Hh = (Hr)s^{- 1}$. Now 
-  
-  $Hs = Hhs = Hrs^{- 1}s = Hr$<br>
+  $(k_1 + k)x = (k_2 + k)x$<br>
   $->$<br>
-  $Hs = Hr$
+  $k_1 = k_2$
 
+  Under this result we can easily see that $rs^{- 1}$ translates to
+
+  $\displaystyle \frac{g^{k_1x}}{g^{k_2x}} = g^{(k_1 - k_2)x}$<br>
+
+  and under $Hr = Hs$ we have $k_1 = k_2$ and
+
+  $g^{(k_1 - k_2)x} = 1 \in H$
+
+  which is always true since $1$ belongs to every subgroup.
+
+  #### Theorem
+
+  If $H$ is a subgroup of $G$ then $|G| = n|H|$ for some positive integer $n$ which is called _index_ of $H$ in $G$. Furthermore, there exist $r_1, \dots, r_n$ such that $G = Hr_1 \cup \dots \cup Hr_n$, and an equivalent construction holds for $H$.
+
+  (Here I guess Ben mistyped $g_1 \dots$)
+
+  #### Proof
+
+  The first statement derives directly from the general form for subgroups elements I wrote previously. _Index_ has the same meaning as order but is more specific, because when we refer to _index_ we can refer only to the order of subgroups.
+
+  The second statement holds because, recalling the general form for elements of $H$ being $g^{kx}$, we have
+
+  $g^{kx}
   
 
 
