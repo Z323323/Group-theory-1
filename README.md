@@ -155,7 +155,7 @@
   $->$<br>
   $\displaystyle g^{k} = \frac{g^{kbn}}{g^{kam}} = g^{k(bn - am)} = g^{k(1)} = g^{k} = x$
 
-  This whole construction holds because by [https://github.com/Z323323/Roots-of-unity?tab=readme-ov-file#obtaining-the-almighty-power-on-multiplicative-groups-analysing-gauss-heptadecagon-and-gaussian-periods] we know that $u = g^{kn}$ and $v = g^{km}$ is a general form to represent both subgroups elements.
+  This whole construction holds because by [https://github.com/Z323323/Roots-of-unity?tab=readme-ov-file#obtaining-the-almighty-power-on-multiplicative-groups-analysing-gauss-heptadecagon-and-gaussian-periods] we know that $u = g^{kn}$ and $v = g^{km}$ is a general form to represent both subgroups elements. Also, we can easily replace $bn - am = 1$ using the general form $bn + am = 1$ being aware we will either end up having $bn - am = 1$ or $am - bn = 1$ which produces the same outcome.
   
    #### 3
 
@@ -180,7 +180,19 @@
    #### 8
 
    Let $g \in G$ and $H \leq G$, then $g^{- 1}Hg$ is a subgroup of $G$ isomorphic to $H$. To figure this out quickly, remember that $G$ and $H$ are defined over the same modulo, this means that we are basically removing elements from $H$ and then reinsert them probably altering the order. Calling $R$ the resulting set, we will have $|R| = |H|$ and $R = H$.
-    
+
+   ### Setting up a convenient formalization on subgroups
+
+   Analyzing $(2)$ I noticed we can make a convenient formalization. 
+
+   Let $S$ be a subgroup of $G$, we can refer to every element of $S$ letting $s \in (G, S)$ generator for $S$ and writing 
+
+   $s^{kx}$
+
+   where $k$ is a constant such that if the order of $S$ is $\phi(n) / y$ for some $y | \phi(n)$ ($S$ is the subgroup defined by the roots of unity of $y$)
+
+   $\displaystyle k \cdot \frac{y}{\phi(n)} = \phi(n)$
+ 
 </p>
 
 ## Lagrange's theorem
@@ -188,8 +200,6 @@
 <p>
 
   [https://crypto.stanford.edu/pbc/notes/group/lagrange.html].
-
-  Let's now analyse this core theorem from a more formal point of view.
 
   #### Lemma
 
