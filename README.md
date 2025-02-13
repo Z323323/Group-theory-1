@@ -275,13 +275,13 @@
 
   #### Example
 
-  Defining $Z_{6}^{+}$ and using $1, 2, 3, 4, 5$ as test-generators we get
+  Defining $Z_{6}^{+}$ and using $1, 2, 3, 4, 5$ as subgroups generators we get
 
-  $\\{1, 2, 3, 4, 5, 0, \dots \\}$<br>
-  $\\{2, 4, 0, 2, 4, 0, \dots \\}$<br>
-  $\\{3, 0, 3, 0, 3, 0, \dots \\}$<br>
-  $\\{4, 2, 0, 4, 2, 0, \dots \\}$<br>
-  $\\{5, 4, 3, 2, 1, 0, \dots \\}$
+  1. $\\{1, 2, 3, 4, 5, 0, \dots \\}$
+  2. $\\{2, 4, 0, 2, 4, 0, \dots \\}$
+  3. $\\{3, 0, 3, 0, 3, 0, \dots \\}$
+  4. $\\{4, 2, 0, 4, 2, 0, \dots \\}$
+  5. $\\{5, 4, 3, 2, 1, 0, \dots \\}$
 
   and we can derive a couple of simple properties. We have $1, 5$ being generators for the set and it's quite intuitive to derive that any generator will need to be coprime with the modulo. Now let's talk about uniqueness and orders. Elements which share the same cofactor(s) with the modulo will have the same order, and every element before $0$ will be different ensuring uniqueness of elements because, let $n = abc$, moving the problem to multiplicative groups we get
 
@@ -293,11 +293,20 @@
   - $abd \cdot c \equiv 0 \mod abc$
   - $de \cdot abc \equiv 0 \mod abc$
 
-  where numbers of the left side of $\cdot$ represent some test-generators for $Z_{abc}^{+}$, and numbers on the right represent their subgroup order (which prove everything said but uniqueness). Now keeping the problem on multiplicative groups we know that we can represent any number which is coprime with $n = abc$ as the product of some $g^{x}$, g^{y}$ where $g$ is a generator for $Z_{abc}^{*}$,
+  where numbers of the left side of $\cdot$ represent subgroups generators for $Z_{abc}^{+}$, and numbers on the right represent their subgroup order (which prove everything said but uniqueness). Now keeping the problem on multiplicative groups we know that we can represent any number $1 \leq X < n = abc$ as $X = g^{x}$ for some $x \geq 1$ where $g$ is a generator for $Z_{abc}^{*}$; this means that as long as we have $g^{x}$ which is representable as the product of two numbers which doesn't produce $abc$ we will have every pair of these numbers pairwise different, and this proves uniqueness.
+
+  We can now state a couple rules.
+
+  #### Theorem 1
+
+  Every subgroup of a cyclic group is cyclic, and this works both for additive and multiplicative _finite groups_. This doesn't need a proof, since everything said.
+
+  #### Theorem 2
+
+  Every group which has composite order have proper subgroups. This doesn't need a proof either.
+  
+  </p>
 
   
-
-
-  </p>
 
 
