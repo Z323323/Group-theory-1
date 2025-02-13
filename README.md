@@ -247,12 +247,13 @@
 
   The first statement derives directly from the general form for subgroups elements I wrote previously. _Index_ has the same meaning as order but is more specific, because when we refer to _index_ we can refer only to the order of subgroups.
 
-  The second statement holds because, recalling the general form for elements of $H$ being $g^{kx}$, we have
-
-  $g^{kx}
+  The second statement holds because, recalling the general form for elements of $H$ subgroup of $G$ being $g^{kx}$, and $(2)$, we can use two elements of coprimes _indexes_ subgroups to build every element of $G$ such that the two _indexes_ multiplied equal the order of $G$. Under this last assumption $o_G = o_Ho_S$ lies the proof for this theorem, because setting a new hypothesis where $o_G = o_Ho_So_Ro_Fo_L \dots$ implies 
   
+  $G = g^{k_Hx}g^{k_Sx}g^{k_Rx} \dots$
+  
+  which produces
 
-
+  $G = g^{\phi(n)x} = g^{x}$
   
 </p>
   
