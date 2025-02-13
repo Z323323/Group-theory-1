@@ -1,4 +1,4 @@
-# Formal group theory
+# Formal group theory 1
 
 ## Groups
 
@@ -139,11 +139,11 @@
 
 <p>
   
-  #### 1
+  #### $(1)$
 
   If $g \in G$ has order $o$, then $x^{m} = 1$ iff $o | m$. This is a direct consequence of [https://github.com/Z323323/Group-theory-elements?tab=readme-ov-file#proof-of-cyclicness-of-subgroups-and-uniqueness-of-each-element].
 
-  #### 2
+  #### $(2)$
 
   If $x \in G$ has order $mn$, where $m, n$ are coprime, then $x$ can be uniquely expressed in the form $x = uv$ where $u$ has order $m$ and $v$ has order $n$. Let $u = x^{bn}$ and $v = x^{am}$ such that $bn + am = 1$, by Bezout's Identity that equation always has a solution. This means that for example, if the solution of the identity is $bn - am = 1$ then
 
@@ -155,29 +155,29 @@
   $->$<br>
   $\displaystyle g^{k} = \frac{g^{kbn}}{g^{kam}} = g^{k(bn - am)} = g^{k(1)} = g^{k} = x$
 
-  This whole construction holds because by [https://github.com/Z323323/Roots-of-unity?tab=readme-ov-file#obtaining-the-almighty-power-on-multiplicative-groups-analysing-gauss-heptadecagon-and-gaussian-periods] we know that $u = g^{kn}$ and $v = g^{km}$ is a general form to represent both subgroups elements. Also, we can easily replace $bn - am = 1$ using the general form $bn + am = 1$ being aware we will either end up having $bn - am = 1$ or $am - bn = 1$ which produces the same outcome.
+  We can easily replace $bn - am = 1$ using the general form $bn + am = 1$ being aware we will either end up having $bn - am = 1$ or $am - bn = 1$ which produces the same outcome.
   
-   #### 3
+   #### $(3)$
 
    A non-empty subset $H$ of $G$ is a subgroup of $G$ iff $H$ is closed under multiplication (1). This is a direct consequence of the definition of subgroups I wrote at [https://github.com/Z323323/Group-theory-elements/blob/main/README.md].
 
-   #### 4 
+   #### $(4)$
 
    A non-empty subset $H \subset G$ is a subgroup iff $H^{2} \subset H$. To get this imagine $H$ not being a subgroup of $G$. We have that $e^{2} \not\in H$ for some element $e \in H$ and therefore $H$ not being a subgroup of $G$.
 
-   #### 5
+   #### $(5)$
 
    For a subgroup $H$, for all $h \in H$ it must be that $hH = H = Hh$. Following [https://github.com/Z323323/Group-theory-elements?tab=readme-ov-file#multiplicative-groups-cyclic-subgroups-and-generators] $h$ must be some power of $e$ where $e$ is a generator for the subgroup; the lemma follows.
 
-   #### 6
+   #### $(6)$
 
    For any set $S \subset H$, $SH = H = HS$. This is exactly the same logic of the previous one.
 
-   #### 7
+   #### $(7)$
 
    A non-empty subset $H \subset G$ is a subgroup iff $H^{2} = H$. Follows from (4). You could also imagine $\langle h \rangle = H$, then shifting every element right by $1$ position clearly produces $H$.
 
-   #### 8
+   #### $(8)$
 
    Let $g \in G$ and $H \leq G$, then $g^{- 1}Hg$ is a subgroup of $G$ isomorphic to $H$. To figure this out quickly, remember that $G$ and $H$ are defined over the same modulo, this means that we are basically removing elements from $H$ and then reinsert them probably altering the order. Calling $R$ the resulting set, we will have $|R| = |H|$ and $R = H$.
 
@@ -239,23 +239,65 @@
 
   #### Theorem
 
-  If $H$ is a subgroup of $G$ then $|G| = n|H|$ for some positive integer $n$ which is called _index_ of $H$ in $G$. Furthermore, there exist $r_1, \dots, r_n$ such that $G = Hr_1 \cup \dots \cup Hr_n$, and an equivalent construction holds for $H$.
+  If $H$ is a subgroup of $G$ then $|G| = n|H|$ for some positive integer $n$ which is called _index_ of $H$ in $G$. Furthermore, there exist $r_1, \dots, r_n$ such that $G = Hr_1 \cup \dots \cup Hr_n$, and an equivalent construction holds for $H$ if the _index_ $i$ of $H$ is a composite number.
 
   (Here I guess Ben mistyped $g_1 \dots$)
 
   #### Proof
 
-  The first statement derives directly from the general form for subgroups elements I wrote previously. _Index_ has the same meaning as order but is more specific, because when we refer to _index_ we can refer only to the order of subgroups.
+  The first statement derives directly from the general form for subgroups elements I wrote previously. The _index_ indicates the number of cofactors of $o_G$.
 
-  The second statement holds because, recalling the general form for elements of $H$ subgroup of $G$ being $g^{kx}$, and $(2)$, we can use two elements of coprimes _indexes_ subgroups to build every element of $G$ such that the two _indexes_ multiplied equal the order of $G$. Under this last assumption $o_G = o_Ho_S$ lies the proof for this theorem, because setting a new hypothesis where $o_G = o_Ho_So_Ro_Fo_L \dots$ implies 
+  The second statement holds because, recalling the general form for the elements of $H$ subgroup of $G$ being $g^{kx}$ and $(2)$, we can use two elements which belong to two different subgroups having coprimes orders to build every element of $G$ such that the two orders multiplied equal the order of $G$. Under this last assumption $(o_G = o_Ho_S)$ lies the proof for this theorem, because setting a new hypothesis where $o_G = o_Ho_So_Ro_Fo_L \dots$ where all orders are pairwise coprime produces 
   
   $G = g^{k_Hx}g^{k_Sx}g^{k_Rx} \dots$
   
-  which produces
+  which produces the general form for the elements of $G$
 
-  $G = g^{\phi(n)x} = g^{x}$
+  $g^{\phi(n)x} = g^{x}$
+
+  which is an equivalent result compared to $G = Hr_1 \cup \dots \cup Hr_n$, even though I guess there exist some $r_q \in H$. The statement is not the clearest.
+
+  #### Corollary 1
+
+  Let $|G|$ be the order of $G$, and $g \in G$, then $g \in H$ and $|H| | |G|$. This is a direct consequence of the Euler's theorem and the general forms structure.
+
+  #### Corollary 2
+
+  Let $G$ a group of prime order, then $G$ has no subgroups while being cyclic by Euler's theorem (and corollary but the more I study these topics the more I realize Euler's theorem is enough to state cyclicality).
   
 </p>
+
+  ## Cyclic groups
+
+  <p>
+
+  It is worth to spend a couple words on _additive finite groups_ now. To define them we can just take the definition of multiplicative subgroups and change the identity element to $0$. It derives that the inverse of a number in an additive group is its negative. Also, it is quite easy to figure out that for any prime $n$, the order of any subgroup of $Z_{n}^{+}$ will be $n$, because, for example, imagine $Z_{17}^{+}$, it's quite simple to figure out that we will encounter $0$ every time we add any generator $17$ times and not before since no elements shares the $17$ cofactor before being multiplied by it. Let's now talk about uniqueness of elements and cases having $n$ which is not prime.
+
+  #### Example
+
+  Defining $Z_{6}^{+}$ and using $1, 2, 3, 4, 5$ as test-generators we get
+
+  $\\{1, 2, 3, 4, 5, 0, \dots \\}$<br>
+  $\\{2, 4, 0, 2, 4, 0, \dots \\}$<br>
+  $\\{3, 0, 3, 0, 3, 0, \dots \\}$<br>
+  $\\{4, 2, 0, 4, 2, 0, \dots \\}$<br>
+  $\\{5, 4, 3, 2, 1, 0, \dots \\}$
+
+  and we can derive a couple of simple properties. We have $1, 5$ being generators for the set and it's quite intuitive to derive that any generator will need to be coprime with the modulo. Now let's talk about uniqueness and orders. Elements which share the same cofactor(s) with the modulo will have the same order, and every element before $0$ will be different ensuring uniqueness of elements because, let $n = abc$, moving the problem to multiplicative groups we get
+
+  - $a \cdot bc \equiv 0 \mod abc$
+  - $ab \cdot c \equiv 0 \mod abc$
+  - $d \cdot abc \equiv 0 \mod abc$
+  - $aa \cdot bc \equiv 0 \mod abc$
+  - $ad \cdot bc \equiv 0 \mod abc$
+  - $abd \cdot c \equiv 0 \mod abc$
+  - $de \cdot abc \equiv 0 \mod abc$
+
+  where numbers of the left side of $\cdot$ represent some test-generators for $Z_{abc}^{+}$, and numbers on the right represent their subgroup order (which prove everything said but uniqueness). Now keeping the problem on multiplicative groups we know that we can represent any number which is coprime with $n = abc$ as the product of some $g^{x}$, g^{y}$ where $g$ is a generator for $Z_{abc}^{*}$,
+
   
+
+
+  </p>
 
 
