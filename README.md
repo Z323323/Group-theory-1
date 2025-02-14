@@ -267,7 +267,7 @@
   
 </p>
 
-  ## Cyclic groups
+  ## Additive (cyclic) groups
 
   <p>
 
@@ -293,7 +293,7 @@
   - $abd \cdot c \equiv 0 \mod abc$
   - $de \cdot abc \equiv 0 \mod abc$
 
-  where numbers of the left side of $\cdot$ represent subgroups generators for $Z_{abc}^{+}$, and numbers on the right represent their subgroup order (which prove everything said but uniqueness). Now keeping the problem on multiplicative groups we know that we can represent any number $1 \leq X < n = abc$ as $X = g^{x}$ for some $x \geq 1$ where $g$ is a generator for $Z_{abc}^{*}$; this means that as long as we have $g^{x}$ which is representable as the product of two numbers which doesn't produce $abc$ we will have every pair of these numbers pairwise different, and this proves uniqueness.
+  where numbers on the left side of $\cdot$ represent subgroups generators for $Z_{abc}^{+}$, and numbers on the right represent their subgroup order (which prove everything said but uniqueness). Now keeping the problem on multiplicative groups we know that we can represent any number $1 \leq X < n = abc$ as $X = g^{x}$ for some $x \geq 1$ where $g$ is a generator for $Z_{abc}^{*}$; this means that as long as we have $g^{x}$ which is representable as the product of two numbers which doesn't produce $abc$ we will have every pair of these numbers pairwise different, and this proves uniqueness.
 
   We can now state a couple rules.
 
@@ -307,6 +307,38 @@
   
   </p>
 
+  ## Isomorphisms between additive and multiplicative groups
+
+  <p>
+
+  Note that since the course analyzed is a general course on group theory a lot of things could become quite strange just because the definition of group, as we saw earlier, admits various interpretations. Since as I already mentioned we are mainly interested in _finite groups_, theorems will normally refer to _finite multiplicative groups_ and _finite additive groups_ which we are going to combine together from now on.
+
+  Let's define the general form of an omomorphism from a multiplicative finite group $M$ to an additive group $A$.
+
+  $M = (\\{x, y, \dots, \phi(n) \\}, \cdot \mod n)$<br>
+  $A = (\\{a, b, \dots, q/p \\}, + \mod q)$<br>
+  $->$<br>
+  $(x \in M &rarr; A)(y \in M &rarr; A) = (xy \in M &rarr; A)$<br>
+  $->$<br>
+  $((x \mod n) \mod q) + ((y \mod n) \mod q) \mod q = (xy \mod n) \mod q$
+
   
+
+  #### Lemma
+
+  If each element $1 \neq g \in G$ is of order $2$ then $G$ is abelian and isomorphic to $Z_{2}^{+} \times \dots \times Z_{2}^{+}$ and $|G|$ is a power of $2$.
+
+  #### Proof
+
+  
+
+
+  
+
+  We define a new relation $\cong$
+
+
+    
+  </p>
 
 
