@@ -313,22 +313,51 @@
 
   Note that since the course analyzed is a general course on group theory a lot of things could become quite strange just because the definition of group, as we saw earlier, admits various interpretations. Since as I already mentioned we are mainly interested in _finite groups_, theorems will normally refer to _finite multiplicative groups_ and _finite additive groups_ which we are going to combine together from now on.
 
-  Let's define the general form of an omomorphism from a multiplicative finite group $M$ to an additive group $A$.
-
-  $M = (\\{x, y, \dots, \phi(n) \\}, \cdot \mod n)$<br>
-  $A = (\\{a, b, \dots, q/p \\}, + \mod q)$<br>
-  $->$<br>
-  $(x \in M &rarr; A)(y \in M &rarr; A) = (xy \in M &rarr; A)$<br>
-  $->$<br>
-  $((x \mod n) \mod q) + ((y \mod n) \mod q) \mod q = (xy \mod n) \mod q$
-
-  
-
   #### Lemma
 
   If each element $1 \neq g \in G$ is of order $2$ then $G$ is abelian and isomorphic to $Z_{2}^{+} \times \dots \times Z_{2}^{+}$ and $|G|$ is a power of $2$.
 
   #### Proof
+
+  Clearly true for $|G| = 2$ (it's not actually hence I'm going to delve it below). 
+
+  Let's start by understanding what we have here without considering the formal form of the omomorphism (isomorphism is a particular omomorphism). The first thing to understand is that the isomorphism is not an equivalence but it's a mapping, that is, a way to represent something in a different form which follows the same behaviour. We can define
+
+  $Z_{2}^{+} = \\{0, 1 \\}$
+
+  and
+
+  $Z_{2}^{+} \times Z_{2}^{+} = \\{(0, 0), (1, 0), (0, 1), (1, 1) \\}$
+
+  Thus, we have to treat the same numbers of the same group as separated entities simply because we are defining the operation $\times$ as a combination of them (you can easily imagine it as multiplication). Now, imagine a group having $|G| = 2$, that is, for example if $G = Z_{\phi(4)}^{\ast}$ which is defined as 
+
+  $Z_{\phi(4)}^{\ast} = \\{ 1, 3 \\}$<br>
+  $->$<br>
+  $|\\{ 1, 3 \\}| = 2$<br>
+  $and$
+  - $\\{ 1, 1 \\}$<br>
+  - $\\{ 3, 1 \\}$
+
+ where every element has $max - order$ $m_o = 2$, and $|G| = 2$. The lemma constrains to not consider $1$ [ because this doesn't hold for $Z_{2}^{\ast}$ ] but $3$ is fine, hence $Z_{\phi(4)}^{\ast}$ matches the definition and should be abelian and isomorphic to $Z_{2}^{+} \times Z_{2}^{+}$.
+
+  Before proceeding there's another little detail involved which I'm going to clarify formally later, that is, since we are defining a combination (multiplication) of elements of two groups (in this case $Z_{2}^{+} \times Z_{2}^{+}$, thus the group is the same, but it's a particular case) we will need to define the same relation for the elements of $Z_{\phi(4)}^{\ast}$ and consider $Z_{\phi(4)}^{\ast} \times Z_{\phi(4)}^{\ast}$. We can identify the isomorphism by observing that we can define a mapping which holds proceeding in this way:
+
+  $Z_{\phi(4)}^{\ast} \times Z_{\phi(4)}^{\ast} = \\{ (1, 3), (3, 1), (3, 3), (1, 1) \\}$
+
+  $Z_{2}^{+} \times Z_{2}^{+} = \\{(0, 0), (1, 0), (0, 1), (1, 1) \\}$
+
+  We can see that the isomorphism holds because these sets behaves in the same way once we solve the multiplications [ and note also that we have the same number of elements, where one element can be considered as being delimited by $($ and $)$ ]:
+
+  Let's now analyze the isomorphism formally.
+
+  $Z_{2}^{+} = (\\{0, 1 \\}, + \mod 2)$<br>
+  $Z_{\phi(4}^{\ast} = (\\{1, 3 \\}, \times \mod 4)$<br>
+  $->$<br>
+  $Z_{\phi(4}^{\ast} &rarr; (Z_{2}^{+} \times Z_{2}^{+})$<br>
+  $->$<br>
+  $(\\{ 1, 3 \\} \mod 2) + (\\{ 1, 3 \\} \mod 2) \mod 2 = \\{ 1, 3 \\} \times \\{ 1, 3 \\} \mod 2$
+
+  
 
   
 
