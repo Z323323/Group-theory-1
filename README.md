@@ -321,41 +321,20 @@
 
   Clearly true for $|G| = 2$ (it's not actually hence I'm going to delve it below). 
 
-  Let's start by understanding what we have here without considering the formal form of the omomorphism (isomorphism is a particular omomorphism). The first thing to understand is that the isomorphism is not an equivalence but it's a mapping, that is, a way to represent something in a different form which follows the same behaviour. We can define
-
-  $Z_{2}^{+} = \\{0, 1 \\}$
-
-  and
-
-  $Z_{2}^{+} \times Z_{2}^{+} = \\{(0, 0), (1, 0), (0, 1), (1, 1) \\}$
-
-  Thus, we have to treat the same numbers of the same group as separated entities simply because we are defining the operation $\times$ as a combination of them (you can easily imagine it as multiplication). Now, imagine a group having $|G| = 2$, that is, for example if $G = Z_{\phi(4)}^{\ast}$ which is defined as 
-
-  $Z_{\phi(4)}^{\ast} = \\{ 1, 3 \\}$<br>
+  Considering the scenario of the lemma proposed, the isomorphism for $|G| = 2$ can be considered as a mapping $Z_{\phi(4)}^{\ast} &rarr; (Z_{2}^{+} \times Z_{2}^{+})$ because
+  
+  $Z_{\phi(4)}^{\ast} = (\\{ 1, 3 \\}, \times \mod 4)$<br>
   $->$<br>
-  $|\\{ 1, 3 \\}| = 2$<br>
-  $and$
-  - $\\{ 1, 1 \\}$<br>
-  - $\\{ 3, 1 \\}$
+  $|Z_{\phi(4)}^{\ast}| = |\\{ 1, 3 \\}| = 2$
 
- where every element has $max - order$ $m_o = 2$, and $|G| = 2$. The lemma constrains to not consider $1$ [ because this doesn't hold for $Z_{2}^{\ast}$ ] but $3$ is fine, hence $Z_{\phi(4)}^{\ast}$ matches the definition and should be abelian and isomorphic to $Z_{2}^{+} \times Z_{2}^{+}$.
-
-  Before proceeding there's another little detail involved which I'm going to clarify formally later, that is, since we are defining a combination (multiplication) of elements of two groups (in this case $Z_{2}^{+} \times Z_{2}^{+}$, thus the group is the same, but it's a particular case) we will need to define the same relation for the elements of $Z_{\phi(4)}^{\ast}$ and consider $Z_{\phi(4)}^{\ast} \times Z_{\phi(4)}^{\ast}$. We can identify the isomorphism by observing that we can define a mapping which holds proceeding in this way:
-
-  $Z_{\phi(4)}^{\ast} \times Z_{\phi(4)}^{\ast} = \\{ (1, 3), (3, 1), (3, 3), (1, 1) \\}$
-
-  $Z_{2}^{+} \times Z_{2}^{+} = \\{(0, 0), (1, 0), (0, 1), (1, 1) \\}$
-
-  We can see that the isomorphism holds because these sets behaves in the same way once we solve the multiplications [ and note also that we have the same number of elements, where one element can be considered as being delimited by $($ and $)$ ]:
-
-  Let's now analyze the isomorphism formally.
+  and each element of $Z_{\phi(4)}^{\ast} neq 1$ has order $2$. It's really important to understand the statement of the isomorphism described in order to understand it. The mapping from a singular set to two (potentially different) sets doesn't alter the general structure of definition of omomorphism, that is, we will simply need to consider $\times$ as the implied relation between elements of the sets mapped [ which in this case is the same, that is, $Z_{2}^{+}$ ]. Resuming this reasoning in a formal way we get
 
   $Z_{2}^{+} = (\\{0, 1 \\}, + \mod 2)$<br>
-  $Z_{\phi(4}^{\ast} = (\\{1, 3 \\}, \times \mod 4)$<br>
+  $Z_{\phi(4)}^{\ast} = (\\{1, 3 \\}, \times \mod 4)$<br>
   $->$<br>
-  $Z_{\phi(4}^{\ast} &rarr; (Z_{2}^{+} \times Z_{2}^{+})$<br>
+  $Z_{\phi(4)}^{\ast} &rarr; (Z_{2}^{+} \times Z_{2}^{+})$<br>
   $->$<br>
-  $(\\{ 1, 3 \\} \mod 2) + (\\{ 1, 3 \\} \mod 2) \mod 2 = \\{ 1, 3 \\} \times \\{ 1, 3 \\} \mod 2$
+  $(\\{ 1, 3 \\} \mod 2) \times (\\{ 1, 3 \\} \mod 2) \mod 2 = \\{ 1, 3 \\} \times \\{ 1, 3 \\} \mod 2$
 
   
 
