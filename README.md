@@ -107,31 +107,22 @@
 
   which holds since [https://github.com/Z323323/From-Fermat-to-the-group-theory?tab=readme-ov-file#multiplication-property].
 
-  This means that the set of positive integers is omomorphic to the set of positive integers $\mod n$ where $n$ is prime. Or stated in a different manner, there exists an omomorphism between the set of positive integers and the the set of positive integers $\mod n$ where $n$ is prime.
+  This means that the multiplicative group of positive integers is omomorphic to the multiplicative group of positive integers $\mod n$ where $n$ is prime. Or stated in a different manner, there exists an omomorphism between the multiplicative group of positive integers and the the multiplicative group of positive integers $\mod n$ where $n$ is prime. 
 
-  Now, since our focus will be directed towards _finite multiplicative groups_ let's analyse the definition of homomorphism for two general finite groups $N = Z_{n}^{\ast}$, $M = Z_{m}^{\ast}$ where $n, m$ are prime numbers.
+  Now, since our focus will be directed towards _finite multiplicative groups_ let's analyze the definition of homomorphism for two general finite groups $N = Z_{n}^{\ast}$, $M = Z_{m}^{\ast}$ where $n, m$ are prime numbers.
 
   $N = (\\{x, y, \dots, n - 1 \\}, \cdot \mod n)$<br>
   $M = (\\{a, b, \dots, m - 1 \\}, \cdot \mod m)$
 
-  We can see that for multiplicative groups we can avoid the construction regarding the binary operator and just consider the modulo, then we define the omomorphism $f : N &rarr; M$, where $f(x)$ simply maps elements from the group $Z_{n}^{\ast}$ to $Z_{m}^{\ast}$.
+  We can see that for multiplicative groups we can avoid the construction regarding the binary operator and just consider the modulo, then we define the omomorphism $f : N &rarr; M$, where $f(x)$ maps elements from the group $Z_{n}^{\ast}$ to $Z_{m}^{\ast}$.
 
   $(x \in N &rarr; M)(y \in N &rarr; M) = (xy \in N &rarr; M)$<br>
   $->$<br>
   $(x \mod n &rarr; M)(y \mod n &rarr; M) = (xy \mod n &rarr; M)$<br>
   $->$<br>
-  $((x \mod n) \mod m)((y \mod n) \mod m) \mod m = (z \mod n) \mod m$
+  $((x \mod n) \mod m)((y \mod n) \mod m) \mod m = (xy \mod n) \mod m$
 
-  Now, before you start crying, note that we will face the same modulo operation operating with _finite groups_ in general (therefore subgroups relations), that is, something of this form
-
-  $G = (\\{x, y, \dots, \phi(n) \\}, \cdot \mod n)$<br>
-  $S = (\\{a, b, \dots, \phi(n)/p \\}, \cdot \mod n)$<br>
-  $->$<br>
-  $(a \mod n)(b \mod n) \mod n = c \mod n$
-
-  We can spot that in order to have an **isomorphism** then we necessarily have $|G| = |S|$ which reduces the problem complexity by far because it means that we are operating under the same modulo **and** the same number of elements in the sets, thus, $G = S$.
-
-  Note that unless specified, every operation from now on will be over the same modulo operation and we will refer to _finite multiplicative groups_.
+  Note that when reasoning about multiplicative subgroups the previous form simplifies because the modulo is shared, and for example $((x \mod n) \mod n) = x \mod n$.
   
 </p>
 
@@ -179,7 +170,7 @@
 
    #### $(8)$
 
-   Let $g \in G$ and $H \leq G$, then $g^{- 1}Hg$ is a subgroup of $G$ isomorphic to $H$. To figure this out quickly, remember that $G$ and $H$ are defined over the same modulo, this means that we are basically removing elements from $H$ and then reinsert them probably altering the order. Calling $R$ the resulting set, we will have $|R| = |H|$ and $R = H$.
+   Let $g \in G$ and $H \leq G$, then $g^{- 1}Hg$ is a subgroup of $G$ isomorphic to $H$. To figure this out quickly, remember that $G$ and $H$ are defined over the same modulo, this means that we are basically removing elements from $H$ and then reinserting them. Calling $R$ the resulting set, we will have $|R| = |H|$ and $R = H$.
 
    ### Setting up a convenient formalization on subgroups
 
@@ -245,9 +236,11 @@
 
   #### Proof
 
-  The first statement derives directly from the general form for subgroups elements I wrote previously. The _index_ indicates the number of cofactors of $o_G$.
+  The first statement derives directly from the general form for subgroups elements I wrote previously and
 
-  The second statement holds because, recalling the general form for the elements of $H$ subgroup of $G$ being $g^{kx}$ and $(2)$, we can use two elements which belong to two different subgroups having coprimes orders to build every element of $G$ such that the two orders multiplied equal the order of $G$. Under this last assumption $(o_G = o_Ho_S)$ lies the proof for this theorem, because setting a new hypothesis where $o_G = o_Ho_So_Ro_Fo_L \dots$ where all orders are pairwise coprime produces 
+  $\displaystyle index_H = \frac{o_G}{o_H}$
+
+  The second statement holds because, recalling the general form for the elements of $H$ subgroup of $G$ being $g^{kx}$, and $(2)$, we can use two elements which belong to two different subgroups having coprimes orders to build every element of $G$ such that the two orders multiplied equal the order of $G$. Under this last assumption $(o_G = o_Ho_S)$ lies the proof for this theorem, because setting a new hypothesis where $o_G = o_Ho_So_Ro_Fo_L \dots$ where all orders are pairwise coprime produces 
   
   $G = g^{k_Hx}g^{k_Sx}g^{k_Rx} \dots$
   
@@ -307,7 +300,7 @@
   
   </p>
 
-  ## Isomorphisms between additive and multiplicative groups
+  ## Isomorphisms between multiplicative and additive groups
 
   <p>
 
@@ -318,35 +311,52 @@
   If each element $1 \neq g \in G$ is of order $2$ then $G$ is abelian and isomorphic to $Z_{2}^{+} \times \dots \times Z_{2}^{+}$ and $|G|$ is a power of $2$.
 
   #### Proof
-
-  Clearly true for $|G| = 2$ (it's not actually hence I'm going to delve it below). 
-
-  Considering the scenario of the lemma proposed, the isomorphism for $|G| = 2$ can be considered as a mapping $Z_{\phi(4)}^{\ast} &rarr; (Z_{2}^{+} \times Z_{2}^{+})$ because
   
-  $Z_{\phi(4)}^{\ast} = (\\{ 1, 3 \\}, \times \mod 4)$<br>
+  Considering the scenario of the lemma proposed, the isomorphism for $|G| = 2$ can be considered as a mapping $Z_{\phi(8)}^{\ast} &rarr; Z_{2}^{+} \times Z_{2}^{+}$, because
+
+  $Z_{\phi(8)}^{\ast} = (\\{ 1, 3, 5, 7 \\}, \cdot \mod 4)$<br>
   $->$<br>
-  $|Z_{\phi(4)}^{\ast}| = |\\{ 1, 3 \\}| = 2$
+  $|Z_{\phi(8)}^{\ast}| = |\\{ 1, 3, 5, 7 \\}| = 4$
 
-  and each element of $Z_{\phi(4)}^{\ast} neq 1$ has order $2$. It's really important to understand the statement of the isomorphism described in order to understand it. The mapping from a singular set to two (potentially different) sets doesn't alter the general structure of definition of omomorphism, that is, we will simply need to consider $\times$ as the implied relation between elements of the sets mapped [ which in this case is the same, that is, $Z_{2}^{+}$ ]. Resuming this reasoning in a formal way we get
+  and each element of $Z_{\phi(8)}^{\ast} \neq 1$ has order $2$ (see the link below to get why). Let's now analyse $Z_{2}^{+} \times Z_{2}^{+}$.
 
-  $Z_{2}^{+} = (\\{0, 1 \\}, + \mod 2)$<br>
-  $Z_{\phi(4)}^{\ast} = (\\{1, 3 \\}, \times \mod 4)$<br>
+  $Z_{2}^{+} \times Z_{2}^{+} = (\\{ (0, 0), (1, 0), (0, 1), (1, 1) \\}, + \mod 2)$<br>
   $->$<br>
-  $Z_{\phi(4)}^{\ast} &rarr; (Z_{2}^{+} \times Z_{2}^{+})$<br>
+  $|Z_{2}^{+}| = |\\{ (0, 0), (1, 0), (0, 1), (1, 1) \\}| = 4$
+
+  Since [https://github.com/Z323323/Group-theory-elements?tab=readme-ov-file#theorem] we know that $Z_{\phi(8)}^{\ast}$ has $1$ element $(1)$ of order $1$, and $3$ of order $2$. We can see that this is the same for $Z_{2}^{+} \times Z_{2}^{+}$ because, setting $(0, 0)$ as the identity we have
+
+  $Z_{2}^{+} \times Z_{2}^{+} = (\\{ (0, 0), (1, 0), (0, 1), (1, 1) \\}, + \mod 2)$<br>
   $->$<br>
-  $(\\{ 1, 3 \\} \mod 2) \times (\\{ 1, 3 \\} \mod 2) \mod 2 = \\{ 1, 3 \\} \times \\{ 1, 3 \\} \mod 2$
+  $\\{ (0, 0), (1, 0) + (1, 0) = (0, 0), (0, 1) + (0, 1) = (0, 0), (1, 1) + (1, 1) = (0, 0) \\}$
+
+  that is, every element has order $2$ except for $(0, 0)$ which has order $1$ and $1 &rarr; (0, 0)$. Formalyzing produces
+
+  $(x \in Z_{\phi(8)}^{\ast} &rarr; Z_{2}^{+} \times Z_{2}^{+}) + (y \in Z_{\phi(8)}^{\ast} &rarr; Z_{2}^{+} \times Z_{2}^{+}) \mod 2 = (xy \in Z_{\phi(8)}^{\ast} &rarr; Z_{2}^{+} \times Z_{2}^{+})$
+  
+  which is quite unbelievable at first, that is, since $Z_{\phi(8)}^{\ast}$ doesn't have generators, it's true that every subgroup generator multiplied by another subgroup generator won't produce $1$. At the same time it must be that another element $e \in Z_{\phi(8)}^{\ast}$ will be produced, thus, for this particular example, another generator for some subgroup will be produced, this is reflected by $Z_{2}^{+} \times Z_{2}^{+}$ because
+
+  - $(0, 0) + X = X$
+  - $(1, 0) + (0, 1) = (1, 1)$
+  - $(1, 0) + (1, 1) = (0, 1)$
+  - $(0, 1) + (1, 0) = (1, 1)$
+  - $(0, 1) + (1, 1) = (1, 0)$
+  - $(1, 1) + (1, 0) = (0, 1)$
+  - $(1, 1) + (0, 1) = (1, 0)$
+
+and
+
+$(1, 0) + (0, 1) + (1, 1) = (0, 0)$
+
+and
+
+$3 \cdot 5 \cdot 7 \mod 8 = 1$
+
+unbelievable right?
+
 
   
-
   
-
-
-  
-
-  We define a new relation $\cong$
-
-
-    
   </p>
 
 
