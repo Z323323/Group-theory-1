@@ -312,7 +312,7 @@
 
   #### Proof
   
-  Considering the scenario of the lemma proposed, the isomorphism for $|G| = 2$ can be considered as a mapping $Z_{\phi(8)}^{\ast} &rarr; Z_{2}^{+} \times Z_{2}^{+}$, because
+  Considering the scenario of the lemma proposed, the isomorphism for $|G| = 2^{2}$ can be considered as a mapping $Z_{\phi(8)}^{\ast} &harr; Z_{2}^{+} \times Z_{2}^{+}$, because
 
   $Z_{\phi(8)}^{\ast} = (\\{ 1, 3, 5, 7 \\}, \cdot \mod 4)$<br>
   $->$<br>
@@ -322,7 +322,7 @@
 
   $Z_{2}^{+} \times Z_{2}^{+} = (\\{ (0, 0), (1, 0), (0, 1), (1, 1) \\}, + \mod 2)$<br>
   $->$<br>
-  $|Z_{2}^{+}| = |\\{ (0, 0), (1, 0), (0, 1), (1, 1) \\}| = 4$
+  $|Z_{2}^{+} \times Z_{2}^{+}| = |\\{ (0, 0), (1, 0), (0, 1), (1, 1) \\}| = 4$
 
   Since [https://github.com/Z323323/Group-theory-elements?tab=readme-ov-file#theorem] we know that $Z_{\phi(8)}^{\ast}$ has $1$ element $(1)$ of order $1$, and $3$ of order $2$. We can see that this is the same for $Z_{2}^{+} \times Z_{2}^{+}$ because, setting $(0, 0)$ as the identity we have
 
@@ -330,9 +330,9 @@
   $->$<br>
   $\\{ (0, 0), (1, 0) + (1, 0) = (0, 0), (0, 1) + (0, 1) = (0, 0), (1, 1) + (1, 1) = (0, 0) \\}$
 
-  that is, every element has order $2$ except for $(0, 0)$ which has order $1$ and $1 &rarr; (0, 0)$. Formalyzing produces
+  that is, every element has order $2$ except for $(0, 0)$ which has order $1$ and $1 &harr; (0, 0)$. Formalyzing produces
 
-  $(x \in Z_{\phi(8)}^{\ast} &rarr; Z_{2}^{+} \times Z_{2}^{+}) + (y \in Z_{\phi(8)}^{\ast} &rarr; Z_{2}^{+} \times Z_{2}^{+}) \mod 2 = (xy \in Z_{\phi(8)}^{\ast} &rarr; Z_{2}^{+} \times Z_{2}^{+})$
+  $(x \in Z_{\phi(8)}^{\ast} &harr; Z_{2}^{+} \times Z_{2}^{+}) + (y \in Z_{\phi(8)}^{\ast} &harr; Z_{2}^{+} \times Z_{2}^{+}) \mod 2 = (xy \in Z_{\phi(8)}^{\ast} &harr; Z_{2}^{+} \times Z_{2}^{+})$
   
   which is quite unbelievable at first, that is, since $Z_{\phi(8)}^{\ast}$ doesn't have generators, it's true that every subgroup generator multiplied by another subgroup generator won't produce $1$. At the same time it must be that another element $e \in Z_{\phi(8)}^{\ast}$ will be produced, thus, for this particular example, another generator for some subgroup will be produced, this is reflected by $Z_{2}^{+} \times Z_{2}^{+}$ because
 
@@ -352,11 +352,75 @@ and
 
 $3 \cdot 5 \cdot 7 \mod 8 = 1$
 
-unbelievable right?
+unbelievable right? And it's not over because since the maps
 
+- $1 &harr; (0, 0)$
+- $3 &harr; (1, 0)$
+- $5 &harr; (0, 1)$
+- $7 &harr; (1, 1)$
+
+we have
+
+- $(0, 0) + X = X$
+- $(1, 0) + (0, 1) = (1, 1) &harr; 3 \cdot 5 \mod 8 = 7$
+- $(1, 0) + (1, 1) = (0, 1) &harr; 3 \cdot 7 \mod 8 = 5$
+- $(0, 1) + (1, 0) = (1, 1) &harr; 5 \cdot 3 \mod 8 = 7$
+- $(0, 1) + (1, 1) = (1, 0) &harr; 5 \cdot 7 \mod 8 = 3$
+- $(1, 1) + (1, 0) = (0, 1) &harr; 7 \cdot 3 \mod 8 = 5$
+- $(1, 1) + (0, 1) = (1, 0) &harr; 7 \cdot 5 \mod 8 = 3$
+
+Let's now analyse $Z_{\phi(16)}^{\ast} &harr; Z_{2}^{+} \times Z_{2}^{+} \times Z_{2}^{+} &harr; Z_{4}^{+} \times Z_{2}^{+}$, we have
+
+  $Z_{\phi(16)}^{\ast} = (\\{ 1, 3, 5, 7, 9, 11, 13, 15 \\}, \cdot \mod 4)$<br>
+  $->$<br>
+  $|Z_{\phi(16)}^{\ast}| = 8$
+
+  This case introduces some complexity, because since the $max - order$ $m_o = 4$ we'll have some generators which produces up to $2$ other generators before $1$. A quick check reveals $3$ produces $9, 11$ and $7$ has order $2$, and this means that we can just use $3$ and $7$ to get every other generator. For ex. setting the identity $(0, 0, 0)$ and defining
+
+  - $3 &harr; (0, 1, 1)$
+  - $7 &harr; (2, 2, 2)$
+  - $->$
+  - $3^2 \mod 16 = 9 &harr; (0, 1, 1) + (0, 1, 1) = (0, 2, 2)$
+  - $3^3 \mod 16 = 11 &harr; (0, 2, 2) + (0, 1, 1) = (0, 3, 3)$
+  - $3^4 \mod 16 = 1 &harr; (0, 3, 3) + (0, 1, 1) = (0, 0, 0)$
+  - $and$
+  - $7^{2} \mod 16 = 1 &harr; (2, 2, 2) + (2, 2, 2) = (0, 0, 0)$
+  - $then$
+  - $3 \cdot 7 \mod 16 = 5 &harr; (0, 1, 1) + (2, 2, 2) = (2, 3, 3)$
+  - $3^{2} \cdot 7 \mod 16 = 15 &harr; (0, 2, 2) + (2, 2, 2) = (2, 0, 0)$
+  - $3^{3} \cdot 7 \mod 16 = 13 &harr; (0, 3, 3) + (2, 2, 2) = (2, 1, 1)$
+  - $also$
+  - $5^{2} \mod 16 = 9 &harr; (2, 3, 3) + (2, 3, 3) = (0, 2, 2)$
+  - $5^{3} \mod 16 = 13 &harr; (0, 2, 2) + (2, 3, 3) = (2, 1, 1)$
+  - $9^{2} \mod 16 = 1 &harr; (0, 2, 2) + (0, 2, 2) = (0, 0, 0)$
+  - $13^{2} \mod 16 = 9 &harr; (2, 1, 1) + (2, 1, 1) = (0, 2, 2)$
+  - $13^{3} \mod 16 = 5 &harr; (0, 2, 2) + (2, 1, 1) = (2, 3, 3)$
+  - $13^{4} \mod 16 = 1 &harr; (2, 3, 3) + (2, 1, 1) = (0, 0, 0)$
+  - $15^{2} \mod 16 = 1 &harr; (2, 0, 0) + (2, 0, 0) = (0, 0, 0)$
+  
+  $Z_{2}^{+} \times Z_{2}^{+} \times Z_{2}^{+} = (\\{ (0, 0, 0), (0, 1, 1), (2, 3, 3), (2, 2, 2), (0, 2, 2), (0, 3, 3), (2, 1, 1), (2, 0, 0) \\}, + \mod 4)$<br>
+  $->$<br>
+  $|Z_{2}^{+} \times Z_{2}^{+} \times Z_{2}^{+}| = 8$
+
+  so
+
+  - $1 &harr; (0, 0, 0)$
+  - $3 &harr; (0, 1, 1)$
+  - $5 &harr; (2, 3, 3)$
+  - $7 &harr; (2, 2, 2)$
+  - $9 &harr; (0, 2, 2)$
+  - $11 &harr; (0, 3, 3)$
+  - $13 &harr; (2, 1, 1)$
+  - $15 &harr; (2, 0, 0)$
+
+  Let's finally define the isomorphism
+
+  $(x \in Z_{\phi(16)}^{\ast} &harr; Z_{2}^{+} \times Z_{2}^{+} \times Z_{2}^{+}) + (y \in Z_{\phi(16)}^{\ast} &harr; Z_{2}^{+} \times Z_{2}^{+} \times Z_{2}^{+}) \mod 4 = (xy \in Z_{\phi(16)}^{\ast} &harr; Z_{2}^{+} \times Z_{2}^{+} \times Z_{2}^{+})$
 
   
+
   
+
   </p>
 
 
