@@ -417,7 +417,7 @@ Let's now analyse $Z_{\phi(16)}^{\ast} &harr; Z_{2}^{+} \times Z_{2}^{+} \times 
 
   $(x \in Z_{\phi(16)}^{\ast} &harr; Z_{2}^{+} \times Z_{2}^{+} \times Z_{2}^{+}) + (y \in Z_{\phi(16)}^{\ast} &harr; Z_{2}^{+} \times Z_{2}^{+} \times Z_{2}^{+}) \mod 4 = (xy \in Z_{\phi(16)}^{\ast} &harr; Z_{2}^{+} \times Z_{2}^{+} \times Z_{2}^{+})$
 
-  Honestly I don't know if it is possible to derive a simpler/different isomorphism but my construction seems to work incredibly. Another interesting and strange behaviour of this kind of isomorphism is that it will hold for $Z_{\phi(15)^{\ast}$ too, indeed this group is strangely correlated with $Z_{\phi(16)^{\ast}$ since $\phi(15) = 2^{3}$ and $\phi(2^{4}) = 2^{3}$. Readapting the previous structures produces
+  Honestly I don't know if it is possible to derive a simpler/different isomorphism but my construction seems to work incredibly. Another interesting and strange behaviour of this kind of isomorphism is that it will hold for $Z_{\phi(15)}^{\ast}$ too, indeed this group is strangely correlated with $Z_{\phi(16)}^{\ast}$ since $\phi(15) = 2^{3}$ and $\phi(2^{4}) = 2^{3}$. Readapting the previous structures produces
 
   $Z_{\phi(15)}^{\ast} = (\\{ 1, 2, 4, 7, 8, 11, 13, 14 \\}, \cdot \mod 4)$<br>
   $->$<br>
@@ -455,8 +455,10 @@ Let's now analyse $Z_{\phi(16)}^{\ast} &harr; Z_{2}^{+} \times Z_{2}^{+} \times 
 
  $(x \in Z_{\phi(15)}^{\ast} &harr; Z_{2}^{+} \times Z_{2}^{+} \times Z_{2}^{+}) + (y \in Z_{\phi(15)}^{\ast} &harr; Z_{2}^{+} \times Z_{2}^{+} \times Z_{2}^{+}) \mod 4 = (xy \in Z_{\phi(15)}^{\ast} &harr; Z_{2}^{+} \times Z_{2}^{+} \times Z_{2}^{+})$
 
-  Generalizing we can observe that for $Z_{\phi(32)}^{\ast}$ etc. and groups having an equivalent $\phi$ it will be always possible to construct similar isomorphisms since for $Z_{\phi(32)}^{\ast}$ etc., recalling [https://github.com/Z323323/Group-theory-elements?tab=readme-ov-file#theorem] we know we'll always have $2/3$ ($1$ will be useless) subgroup generators $
+  Generalizing we can observe that for $Z_{\phi(32)}^{\ast}$ etc. and groups having an equivalent $\phi$ it will be possible (always?) to construct similar isomorphisms since for $Z_{\phi(32)}^{\ast}$ etc., recalling [https://github.com/Z323323/Group-theory-elements?tab=readme-ov-file#theorem] we know we'll always have $2/3$ ($1$ will be useless) independent subgroups generators which we can use along with some subgroup generator of order $2^{k - 2}$ where $2^{k - 2} \equiv 1 \mod 2^{k}$ [ thus $\phi = 2^{k - 1}$ ] to generate the remaining $2^{k - 2}$ generators where $2^{k - 2} + 2^{k - 2} = 2^{k - 1} = \phi(n)$ and the related additive isomorphism.
 
   </p>
+
+  
 
 
