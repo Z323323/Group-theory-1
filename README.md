@@ -371,7 +371,7 @@ we have
 
 Let's now analyse $Z_{\phi(16)}^{\ast} &harr; Z_{2}^{+} \times Z_{2}^{+} \times Z_{2}^{+} &harr; Z_{4}^{+} \times Z_{2}^{+}$, we have
 
-  $Z_{\phi(16)}^{\ast} = (\\{ 1, 3, 5, 7, 9, 11, 13, 15 \\}, \cdot \mod 4)$<br>
+  $Z_{\phi(16)}^{\ast} = (\\{ 1, 3, 5, 7, 9, 11, 13, 15 \\}, \cdot \mod 16)$<br>
   $->$<br>
   $|Z_{\phi(16)}^{\ast}| = 8$
 
@@ -419,7 +419,7 @@ Let's now analyse $Z_{\phi(16)}^{\ast} &harr; Z_{2}^{+} \times Z_{2}^{+} \times 
 
   Honestly I don't know if it is possible to derive a simpler/different isomorphism but my construction seems to work incredibly. Another interesting and strange behaviour of this kind of isomorphism is that it will hold for $Z_{\phi(15)}^{\ast}$ too, indeed this group is strangely correlated with $Z_{\phi(16)}^{\ast}$ since $\phi(15) = 2^{3}$ and $\phi(2^{4}) = 2^{3}$. Readapting the previous structures produces
 
-  $Z_{\phi(15)}^{\ast} = (\\{ 1, 2, 4, 7, 8, 11, 13, 14 \\}, \cdot \mod 4)$<br>
+  $Z_{\phi(15)}^{\ast} = (\\{ 1, 2, 4, 7, 8, 11, 13, 14 \\}, \cdot \mod 15)$<br>
   $->$<br>
   $|Z_{\phi(16)}^{\ast}| = 8$
 
