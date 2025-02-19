@@ -1,4 +1,4 @@
-# Formal group theory 1
+# Group theory 1
 
 ## Groups
 
