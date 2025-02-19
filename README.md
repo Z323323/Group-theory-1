@@ -375,47 +375,47 @@ Let's now analyse $Z_{\phi(16)}^{\ast} &harr; Z_{2}^{+} \times Z_{2}^{+} \times 
   $->$<br>
   $|Z_{\phi(16)}^{\ast}| = 8$
 
-  This case introduces some complexity, because since the $max - order$ $m_o = 4$ we'll have some generators which produces up to $2$ other generators before $1$. A quick check reveals $3$ produces $9, 11$ and $7$ has order $2$, and this means that we can just use $3$ and $7$ to get every other generator. For ex. setting the identity $(0, 0, 0)$ and defining
+  This case introduces some complexity, because since the $max - order$ $m_o = 4$ we'll have some generators which produces up to $2$ other generators before $1$. A quick check reveals $3$ produces $9, 11$ and $7$ has order $2$, and this means that we can just use $3$ and $7$ to get every other generator. For ex. setting the identity $(0, 0)$ and defining
 
-  - $3 &harr; (0, 1, 1)$
-  - $7 &harr; (2, 2, 2)$
+  - $3 &harr; (0, 1)$
+  - $7 &harr; (2, 2)$
   - $->$
-  - $3^2 \mod 16 = 9 &harr; (0, 1, 1) + (0, 1, 1) = (0, 2, 2)$
-  - $3^3 \mod 16 = 11 &harr; (0, 2, 2) + (0, 1, 1) = (0, 3, 3)$
-  - $3^4 \mod 16 = 1 &harr; (0, 3, 3) + (0, 1, 1) = (0, 0, 0)$
+  - $3^2 \mod 16 = 9 &harr; (0, 1) + (0, 1) = (0, 2)$
+  - $3^3 \mod 16 = 11 &harr; (0, 2) + (0, 1) = (0, 3)$
+  - $3^4 \mod 16 = 1 &harr; (0, 3) + (0, 1) = (0, 0)$
   - $and$
-  - $7^{2} \mod 16 = 1 &harr; (2, 2, 2) + (2, 2, 2) = (0, 0, 0)$
+  - $7^{2} \mod 16 = 1 &harr; (2, 2) + (2, 2) = (0, 0, 0)$
   - $then$
-  - $3 \cdot 7 \mod 16 = 5 &harr; (0, 1, 1) + (2, 2, 2) = (2, 3, 3)$
-  - $3^{2} \cdot 7 \mod 16 = 15 &harr; (0, 2, 2) + (2, 2, 2) = (2, 0, 0)$
-  - $3^{3} \cdot 7 \mod 16 = 13 &harr; (0, 3, 3) + (2, 2, 2) = (2, 1, 1)$
+  - $3 \cdot 7 \mod 16 = 5 &harr; (0, 1) + (2, 2) = (2, 3)$
+  - $3^{2} \cdot 7 \mod 16 = 15 &harr; (0, 2) + (2, 2) = (2, 0)$
+  - $3^{3} \cdot 7 \mod 16 = 13 &harr; (0, 3) + (2, 2) = (2, 1)$
   - $also$
-  - $5^{2} \mod 16 = 9 &harr; (2, 3, 3) + (2, 3, 3) = (0, 2, 2)$
-  - $5^{3} \mod 16 = 13 &harr; (0, 2, 2) + (2, 3, 3) = (2, 1, 1)$
-  - $9^{2} \mod 16 = 1 &harr; (0, 2, 2) + (0, 2, 2) = (0, 0, 0)$
-  - $13^{2} \mod 16 = 9 &harr; (2, 1, 1) + (2, 1, 1) = (0, 2, 2)$
-  - $13^{3} \mod 16 = 5 &harr; (0, 2, 2) + (2, 1, 1) = (2, 3, 3)$
-  - $13^{4} \mod 16 = 1 &harr; (2, 3, 3) + (2, 1, 1) = (0, 0, 0)$
-  - $15^{2} \mod 16 = 1 &harr; (2, 0, 0) + (2, 0, 0) = (0, 0, 0)$
+  - $5^{2} \mod 16 = 9 &harr; (2, 3) + (2, 3) = (0, 2)$
+  - $5^{3} \mod 16 = 13 &harr; (0, 2) + (2, 3) = (2, 1)$
+  - $9^{2} \mod 16 = 1 &harr; (0, 2) + (0, 2) = (0, 0)$
+  - $13^{2} \mod 16 = 9 &harr; (2, 1) + (2, 1) = (0, 2)$
+  - $13^{3} \mod 16 = 5 &harr; (0, 2) + (2, 1) = (2, 3)$
+  - $13^{4} \mod 16 = 1 &harr; (2, 3) + (2, 1) = (0, 0)$
+  - $15^{2} \mod 16 = 1 &harr; (2, 0) + (2, 0) = (0, 0)$
   
-  $Z_{2}^{+} \times Z_{2}^{+} \times Z_{2}^{+} = (\\{ (0, 0, 0), (0, 1, 1), (2, 3, 3), (2, 2, 2), (0, 2, 2), (0, 3, 3), (2, 1, 1), (2, 0, 0) \\}, + \mod 4)$<br>
+  $Z_{2}^{+} \times Z_{4}^{+} = (\\{ (0, 0), (0, 1), (2, 3), (2, 2), (0, 2), (0, 3), (2, 1), (2, 0) \\}, + \mod 4)$<br>
   $->$<br>
-  $|Z_{2}^{+} \times Z_{2}^{+} \times Z_{2}^{+}| = 8$
+  $|Z_{2}^{+} \times Z_{4}^{+}| = 8$
 
   so
 
-  - $1 &harr; (0, 0, 0)$
-  - $3 &harr; (0, 1, 1)$
-  - $5 &harr; (2, 3, 3)$
-  - $7 &harr; (2, 2, 2)$
-  - $9 &harr; (0, 2, 2)$
-  - $11 &harr; (0, 3, 3)$
-  - $13 &harr; (2, 1, 1)$
-  - $15 &harr; (2, 0, 0)$
+  - $1 &harr; (0, 0)$
+  - $3 &harr; (0, 1)$
+  - $5 &harr; (2, 3)$
+  - $7 &harr; (2, 2)$
+  - $9 &harr; (0, 2)$
+  - $11 &harr; (0, 3)$
+  - $13 &harr; (2, 1)$
+  - $15 &harr; (2, 0)$
 
   Let's finally define the isomorphism
 
-  $(x \in Z_{\phi(16)}^{\ast} &harr; Z_{2}^{+} \times Z_{2}^{+} \times Z_{2}^{+}) + (y \in Z_{\phi(16)}^{\ast} &harr; Z_{2}^{+} \times Z_{2}^{+} \times Z_{2}^{+}) \mod 4 = (xy \in Z_{\phi(16)}^{\ast} &harr; Z_{2}^{+} \times Z_{2}^{+} \times Z_{2}^{+})$
+  $(x \in Z_{\phi(16)}^{\ast} &harr; Z_{2}^{+} \times Z_{4}^{+}) + (y \in Z_{\phi(16)}^{\ast} &harr; Z_{2}^{+} \times Z_{4}^{+}) \mod 4 = (xy \in Z_{\phi(16)}^{\ast} &harr; Z_{2}^{+} \times Z_{4}^{+})$
 
   Honestly I don't know if it is possible to derive a simpler/different isomorphism but my construction seems to work incredibly. Another interesting and strange behaviour of this kind of isomorphism is that it will hold for $Z_{\phi(15)}^{\ast}$ too, indeed this group is strangely correlated with $Z_{\phi(16)}^{\ast}$ since $\phi(15) = 2^{3}$ and $\phi(2^{4}) = 2^{3}$. Readapting the previous structures produces
 
@@ -425,37 +425,39 @@ Let's now analyse $Z_{\phi(16)}^{\ast} &harr; Z_{2}^{+} \times Z_{2}^{+} \times 
 
   where $2$ produces a subgroup of order $4$ and $11$ is an independent generator. This means that we can start from them to build everything because as I already said, since $2$ produces $2$ generators for two other subgroups then $\\{ 2 \cdot 11, 2^{2} \cdot 11, 2^{3} \cdot 11 \\}$ will produce the remaining $3$ generators.
 
-  - $2 &harr; (0, 1, 1)$
-  - $11 &harr; (2, 2, 2)$
+  - $2 &harr; (0, 1)$
+  - $11 &harr; (2, 2)$
   - $->$
-  - $2^2 \mod 15 = 4 &harr; (0, 1, 1) + (0, 1, 1) = (0, 2, 2)$
-  - $2^3 \mod 15 = 8 &harr; (0, 2, 2) + (0, 1, 1) = (0, 3, 3)$
-  - $2^4 \mod 15 = 1 &harr; (0, 3, 3) + (0, 1, 1) = (0, 0, 0)$
+  - $2^2 \mod 15 = 4 &harr; (0, 1) + (0, 1) = (0, 2)$
+  - $2^3 \mod 15 = 8 &harr; (0, 2) + (0, 1) = (0, 3)$
+  - $2^4 \mod 15 = 1 &harr; (0, 3) + (0, 1) = (0, 0)$
   - $and$
-  - $11^{2} \mod 15 = 1 &harr; (2, 2, 2) + (2, 2, 2) = (0, 0, 0)$
+  - $11^{2} \mod 15 = 1 &harr; (2, 2) + (2, 2) = (0, 0)$
   - $then$
-  - $2 \cdot 11 \mod 15 = 7 &harr; (0, 1, 1) + (2, 2, 2) = (2, 3, 3)$
-  - $2^{2} \cdot 11 \mod 15 = 14 &harr; (0, 2, 2) + (2, 2, 2) = (2, 0, 0)$
-  - $2^{3} \cdot 11 \mod 15 = 13 &harr; (0, 3, 3) + (2, 2, 2) = (2, 1, 1)$
+  - $2 \cdot 11 \mod 15 = 7 &harr; (0, 1) + (2, 2) = (2, 3)$
+  - $2^{2} \cdot 11 \mod 15 = 14 &harr; (0, 2) + (2, 2) = (2, 0)$
+  - $2^{3} \cdot 11 \mod 15 = 13 &harr; (0, 3) + (2, 2) = (2, 1)$
   - $also$
-  - $4^{2} \mod 15 = 1 &harr; (0, 2, 2) + (0, 2, 2) = (0, 0, 0)$
-  - $7^{2} \mod 15 = 4 &harr; (2, 3, 3) + (2, 3, 3) = (0, 2, 2)$
-  - $7^{3} \mod 15 = 13 &harr; (0, 2, 2) + (2, 3, 3) = (2, 1, 1)$
-  - $7^{4} \mod 15 = 1 &harr; (2, 1, 1) + (2, 3, 3) = (0, 0, 0)$
-  - $8^{2} \mod 15 = 4 &harr; (0, 3, 3) + (0, 3, 3) = (0, 2, 2)$
-  - $8^{2} \mod 15 = 2 &harr; (0, 2, 2) + (0, 3, 3) = (0, 1, 1)$
-  - $8^{2} \mod 15 = 1 &harr; (0, 3, 3) + (0, 1, 1) = (0, 0, 0)$
-  - $9^{2} \mod 15 = 1 &harr; (0, 2, 2) + (0, 2, 2) = (0, 0, 0)$
-  - $13^{2} \mod 15 = 4 &harr; (2, 1, 1) + (2, 1, 1) = (0, 2, 2)$
-  - $13^{3} \mod 15 = 7 &harr; (0, 2, 2) + (2, 1, 1) = (2, 3, 3)$
-  - $13^{4} \mod 15 = 1 &harr; (2, 3, 3) + (2, 1, 1) = (0, 0, 0)$
-  - $14^{2} \mod 15 = 1 &harr; (2, 0, 0) + (2, 0, 0) = (0, 0, 0)$
+  - $4^{2} \mod 15 = 1 &harr; (0, 2) + (0, 2) = (0, 0)$
+  - $7^{2} \mod 15 = 4 &harr; (2, 3) + (2, 3) = (0, 2)$
+  - $7^{3} \mod 15 = 13 &harr; (0, 2) + (2, 3) = (2, 1)$
+  - $7^{4} \mod 15 = 1 &harr; (2, 1) + (2, 3) = (0, 0)$
+  - $8^{2} \mod 15 = 4 &harr; (0, 3) + (0, 3) = (0, 2)$
+  - $8^{2} \mod 15 = 2 &harr; (0, 2) + (0, 3) = (0, 1)$
+  - $8^{2} \mod 15 = 1 &harr; (0, 3) + (0, 1) = (0, 0)$
+  - $9^{2} \mod 15 = 1 &harr; (0, 2) + (0, 2) = (0, 0)$
+  - $13^{2} \mod 15 = 4 &harr; (2, 1) + (2, 1) = (0, 2)$
+  - $13^{3} \mod 15 = 7 &harr; (0, 2) + (2, 1) = (2, 3)$
+  - $13^{4} \mod 15 = 1 &harr; (2, 3) + (2, 1) = (0, 0)$
+  - $14^{2} \mod 15 = 1 &harr; (2, 0) + (2, 0) = (0, 0)$
 
  As you can see this construction is from a structural point of view the same we made for $Z_{\phi(16)}^{\ast}$, and we can define the isomorphism
 
- $(x \in Z_{\phi(15)}^{\ast} &harr; Z_{2}^{+} \times Z_{2}^{+} \times Z_{2}^{+}) + (y \in Z_{\phi(15)}^{\ast} &harr; Z_{2}^{+} \times Z_{2}^{+} \times Z_{2}^{+}) \mod 4 = (xy \in Z_{\phi(15)}^{\ast} &harr; Z_{2}^{+} \times Z_{2}^{+} \times Z_{2}^{+})$
+ $(x \in Z_{\phi(15)}^{\ast} &harr; Z_{2}^{+} \times Z_{4}^{+}) + (y \in Z_{\phi(15)}^{\ast} &harr; Z_{2}^{+} \times Z_{4}^{+}) \mod 4 = (xy \in Z_{\phi(15)}^{\ast} &harr; Z_{2}^{+} \times Z_{4}^{+})$
 
   Generalizing we can observe that for $Z_{\phi(32)}^{\ast}$ etc. and groups having an equivalent $\phi$ it will be possible (always?) to construct similar isomorphisms since for $Z_{\phi(32)}^{\ast}$ etc., recalling [https://github.com/Z323323/Group-theory-elements?tab=readme-ov-file#theorem] we know we'll always have $2/3$ ($1$ will be useless) independent subgroups generators which we can use along with some subgroup generator of order $2^{k - 2}$ where $2^{k - 2} \equiv 1 \mod 2^{k}$ [ thus $\phi = 2^{k - 1}$ ] to generate the remaining $2^{k - 2}$ generators where $2^{k - 2} + 2^{k - 2} = 2^{k - 1} = \phi(n)$ and the related additive isomorphism.
+
+  To conclude, $Z_{\phi(15)}^{\ast} \cong Z_{4}^{+} \times Z_{2}^{+}$ means that $Z_{\phi(15)}^{\ast}$ is isomorphic to $Z_{4}^{+} \times Z_{2}^{+}$.
 
   </p>
 
