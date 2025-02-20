@@ -286,7 +286,7 @@
   - $abd \cdot c \equiv 0 \mod abc$
   - $de \cdot abc \equiv 0 \mod abc$
 
-  where numbers on the left side of $\cdot$ represent subgroups generators for $Z_{abc}^{+}$, and numbers on the right represent their subgroup order (which prove everything said but uniqueness). Now keeping the problem on multiplicative groups we know that we can represent any number $1 \leq X < n = abc$ as $X = g^{x}$ for some $x \geq 1$ where $g$ is a generator for $Z_{abc}^{*}$; this means that as long as we have $g^{x}$ which is representable as the product of two numbers which doesn't produce $abc$ we will have every pair of these numbers pairwise different, and this proves uniqueness.
+  where numbers on the left side of $\cdot$ represent subgroups generators for $Z_{abc}^{+}$, and numbers on the right represent their subgroup order (which prove everything said but uniqueness). It results pretty clear that uniqueness follows since we'll get different results until the $o + 1$ addition, similarly to multiplicative groups.
 
   We can now state a couple rules.
 
