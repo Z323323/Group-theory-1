@@ -230,9 +230,7 @@
 
   #### Theorem
 
-  If $H$ is a subgroup of $G$ then $|G| = n|H|$ for some positive integer $n$ which is called _index_ of $H$ in $G$. Furthermore, there exist $r_1, \dots, r_n$ such that $G = Hr_1 \cup \dots \cup Hr_n$, and an equivalent construction holds for $H$ if the _index_ $i$ of $H$ is a composite number.
-
-  (Here I guess Ben mistyped $g_1 \dots$)
+  If $H$ is a subgroup of $G$ then $|G| = n|H|$ for some positive integer $n$ which is called _index_ of $H$ in $G$. Furthermore, there exist $r_1, \dots, r_n \in G$ such that $G = Hr_1 \cup \dots \cup Hr_n$, and an equivalent construction holds for $H$ if the order of $H$ is a composite number.
 
   #### Proof
 
@@ -240,15 +238,11 @@
 
   $\displaystyle index_H = \frac{o_G}{o_H}$
 
-  The second statement holds because, recalling the general form for the elements of $H$ subgroup of $G$ being $g^{kx}$, and $(2)$, we can use two elements which belong to two different subgroups having coprimes orders to build every element of $G$ such that the two orders multiplied equal the order of $G$. Under this last assumption $(o_G = o_Ho_S)$ lies the proof for this theorem, because setting a new hypothesis where $o_G = o_Ho_So_Ro_Fo_L \dots$ where all orders are pairwise coprime produces 
+  The second statement holds because, recalling the general form for the elements of $H$ subgroup of $G$ being $g^{kx}$, and $(2)$, we can use two elements which belong to two different subgroups having coprimes orders to build every element of $G$ such that the two orders multiplied equal the order of $G$. Under this last assumption $(o_G = o_Ho_S)$ lies the proof for this theorem, because setting a new hypothesis where all _indexes_ of the subgroups multiplied equal $\phi(n)$ produces
   
-  $G = g^{k_Hx}g^{k_Sx}g^{k_Rx} \dots$
+  $G = g^{xk_Hk_Sk_R\dots} = g^{x\phi(n)}$
   
-  which produces the general form for the elements of $G$
-
-  $g^{x(k_H + k_S + k_R + k_F + k_L)} \cong g^{x}$<br>
-
-  As long as $k_H, k_S \dots$ are coprimes that form's exponent is not divisible by any general form's exponent except $x$, and this means that we can extend $(2)$, which is an equivalent result compared to $G = Hr_1 \cup \dots \cup Hr_n$, even though I guess there exist some $r_q \in H$. The statement is not the clearest.
+  which is the general form for the elements of $G$. This holds as long as there exist a generator for $G$. In case this doesn't exist it should be possible to generate some $Z_{\phi(n)}^{\ast}$ using an independent generator and a generator of order $2^{k - 2}$ where $\phi(n) = 2^{k - 1}$. We can expand this further considering other cofactors but for the moment I'm not doing this.
 
   #### Corollary 1
 
