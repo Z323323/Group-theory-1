@@ -246,9 +246,9 @@
   
   which produces the general form for the elements of $G$
 
-  $g^{\phi(n)x} = g^{x}$
+  $g^{x(k_H + k_S + k_R + k_F + k_L)} \cong g^{x}$<br>
 
-  which is an equivalent result compared to $G = Hr_1 \cup \dots \cup Hr_n$, even though I guess there exist some $r_q \in H$. The statement is not the clearest.
+  As long as $k_H, k_S \dots$ are coprimes that form's exponent is not divisible by any general form's exponent except $x$, and this means that we can extend $(2)$, which is an equivalent result compared to $G = Hr_1 \cup \dots \cup Hr_n$, even though I guess there exist some $r_q \in H$. The statement is not the clearest.
 
   #### Corollary 1
 
